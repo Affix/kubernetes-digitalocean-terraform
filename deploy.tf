@@ -71,7 +71,7 @@ resource "digitalocean_droplet" "k8s_master" {
         destination = "/tmp/00-master.sh"
         connection {
             type = "ssh",
-            user = "core",
+            user = "root",
             private_key = "${file(var.ssh_private_key)}"
         }
     }
@@ -81,7 +81,7 @@ resource "digitalocean_droplet" "k8s_master" {
         destination = "/tmp/install-kubeadm.sh"
         connection {
             type = "ssh",
-            user = "core",
+            user = "root",
             private_key = "${file(var.ssh_private_key)}"
         }
     }
@@ -98,7 +98,7 @@ resource "digitalocean_droplet" "k8s_master" {
         ]
         connection {
             type = "ssh",
-            user = "core",
+            user = "root",
             private_key = "${file(var.ssh_private_key)}"
         }
     }
@@ -138,7 +138,7 @@ resource "digitalocean_droplet" "k8s_worker" {
         destination = "/tmp/01-worker.sh"
         connection {
             type = "ssh",
-            user = "core",
+            user = "root",
             private_key = "${file(var.ssh_private_key)}"
         }
     }
@@ -148,7 +148,7 @@ resource "digitalocean_droplet" "k8s_worker" {
         destination = "/tmp/install-kubeadm.sh"
         connection {
             type = "ssh",
-            user = "core",
+            user = "root",
             private_key = "${file(var.ssh_private_key)}"
         }
     }
@@ -158,7 +158,7 @@ resource "digitalocean_droplet" "k8s_worker" {
         destination = "/tmp/kubeadm_join"
         connection {
             type = "ssh",
-            user = "core",
+            user = "root",
             private_key = "${file(var.ssh_private_key)}"
         }
     }
@@ -174,7 +174,7 @@ resource "digitalocean_droplet" "k8s_worker" {
         ]
         connection {
             type = "ssh",
-            user = "core",
+            user = "root",
             private_key = "${file(var.ssh_private_key)}"
         }
     }
