@@ -59,7 +59,7 @@ provider "digitalocean" {
 
 
 resource "digitalocean_droplet" "k8s_master" {
-    image = "coreos-stable"
+    image = "ubuntu-16-04-x64"
     name = "${var.prefix}k8s-master"
     region = "${var.do_region}"
     private_networking = true
@@ -123,7 +123,7 @@ EOF
 
 resource "digitalocean_droplet" "k8s_worker" {
     count = "${var.number_of_workers}"
-    image = "coreos-stable"
+    image = "ubuntu-16-04-x64"
     name = "${var.prefix}${format("k8s-worker-%02d", count.index + 1)}"
     region = "${var.do_region}"
     size = "${var.size_worker}"
