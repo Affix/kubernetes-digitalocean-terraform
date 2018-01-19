@@ -9,4 +9,4 @@ systemctl enable docker kubelet
 kubeadm token create --print-join-command > /tmp/kubeadm_join
 
 # used to setup kubectl 
-chown core /etc/kubernetes/admin.conf
+# chown core /etc/kubernetes/admin.conf
