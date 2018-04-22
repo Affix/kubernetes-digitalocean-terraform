@@ -8,3 +8,4 @@ With contributions from:
 - [Marcos](https://github.com/arkanus)
 - [Patrick O'Connor](https://github.com/dontrebootme)
 - [Dario Nieuwenhuis](https://github.com/Dirbaio)
+- [Keiran Smith](https://github.com/Affix)
